@@ -1,7 +1,7 @@
 import React from 'react';
-import Futurama from '../containers/Futurama';
+import FuturamaFn from '../containers/FuturamaFn';
 
 export default function App() {
-  return <Futurama />;
+  return <FuturamaFn />;
 }
   
