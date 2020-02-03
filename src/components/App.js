@@ -1,6 +1,7 @@
 import React from 'react';
+import Futurama from '../containers/Futurama';
 
 export default function App() {
-  return <h1>Hello World</h1>;
+  return <Futurama />;
 }
   
