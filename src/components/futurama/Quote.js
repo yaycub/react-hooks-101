@@ -3,9 +3,8 @@ import PropTypes from 'prop-types';
 
 const Quote = ({ quotes }) => {
   const quoteElements = quotes.map(quote => (
-    <li key={quote}>
-      <p>&quot{quote}&quot - {quote.character}</p>
-    </li>
+    <li key={quote.quote}>
+      &quot;{quote.quote}&quot;</li>
   ));
 
   return (
@@ -18,8 +17,7 @@ const Quote = ({ quotes }) => {
 Quote.propTypes = {
   quotes: PropTypes.arrayOf(PropTypes.shape({
     character: PropTypes.string.isRequired,
-    quote: PropTypes.string.isRequired,
-    image: PropTypes.string.isRequired
+    quote: PropTypes.string.isRequired
   })).isRequired
 };
 

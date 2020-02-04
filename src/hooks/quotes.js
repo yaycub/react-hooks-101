@@ -8,7 +8,7 @@ export const useQuotes = () => {
 
   useEffect(() => {
     getQuote(character, count)
-      .then(console.log);
+      .then(setResponse);
   }, [character, count]);
 
   return { response, character, count, setCharacter, setCount };
