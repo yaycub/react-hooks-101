@@ -5,7 +5,11 @@ import styles from './Futurama.css';
 import { useQuotes } from '../hooks/quotes';
 
 const FuturamaFn = () => {
-  const { response, count, setCharacter, setCount } = useQuotes();
+  const { response, count, setCharacter, setCount, setRefetch } = useQuotes();
+
+  const handleClick = () => {
+    setRefetch(refetch => !refetch);
+  };
 
   return (
     <>
@@ -36,6 +40,7 @@ const FuturamaFn = () => {
           <input type="number" value={count} name="count" min="1" max="10"
             onChange={({ target }) => setCount(target.value)} />
         </div>
+        <button onClick={handleClick} >Refresh Quotes</button>
       </div>
     </>
   );
