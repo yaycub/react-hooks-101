@@ -1,7 +1,6 @@
-export const getQuote = () => {
-  const randomNumber = Math.floor(Math.random() * 100);
-
-  return fetch('http://futuramaapi.herokuapp.com/api/quotes/100')
-    .then(res => res.json())
-    .then(res => res[randomNumber]);
+export const getQuote = (character, count = 1) => {
+  if(!count) return Promise.resolve([{ quote: 'Please input a quote amount!', character: 'Admin' }]);
+  
+  return fetch(`https://futuramaapi.herokuapp.com/api/characters/${character}/${count}`)
+    .then(res => res.json());
 };

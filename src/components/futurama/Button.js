@@ -1,12 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Button = ({ onClick }) => (
-  <button onClick={onClick}>Get New Quote</button>
+const Button = ({ setCharacter, character, image }) => (
+  <button onClick={() => setCharacter(character)}><img src={image} style={{ height:'10vh' }} /></button>
 );
 
 Button.propTypes = {
-  onClick: PropTypes.func.isRequired
+  setCharacter: PropTypes.func.isRequired,
+  character: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired
 };
 
 export default Button;

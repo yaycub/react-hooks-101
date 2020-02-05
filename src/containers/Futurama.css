@@ -1,0 +1,47 @@
+.Futurama{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  ul{
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 55vw;
+    height: 33vh;
+    border: 3px dashed black;
+
+    li{
+      margin: 5px;
+      font-size: 13.5px;
+      text-align: center;
+      line-height: 15px;
+    }
+  }
+
+  div{
+    width: 25vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+
+    p{
+      font-size: 13.5px;
+    }
+  }
+
+  button{
+    outline: none;
+    border: 2px dotted black;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 10px;
+    background-color: bisque;
+  }
+}
