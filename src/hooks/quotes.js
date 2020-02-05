@@ -10,7 +10,7 @@ export const useQuotes = () => {
   useEffect(() => {
     getQuote(character, count)
       .then(setResponse);
-  }, [character, count, refetch]);
+  }, [character, refetch]);
 
   return { response, character, count, setCharacter, setCount, setRefetch };
 };
